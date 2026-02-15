@@ -1,9 +1,10 @@
-import React from 'react'
+import cn from 'classnames'
+import styles from './Footer.module.css'
 
-const Footer = () => {
+const Footer = ({className: className = ''}) => {
   return (
-    <div>
-      сайт создан в качестве дипломного проекта
+    <div className={cn(styles.footer, className)}>
+      @2025 sport-master. All rights reserved.
     </div>
   )
 }

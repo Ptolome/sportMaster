@@ -14,19 +14,19 @@ const index = ({id}: CardProps) => {
     )
    }
 
-   const {name, model, description, imageUrl, price} = good
+   const {name, brand: {name: model}, description, imageUrl, price} = good
 
   return (
     <div className={style.wripper}>
       <div className={style.information}>
-        <div className={style.brand}>{name}</div>
-        <h1>{model}</h1>
+        <div className={style.brand}>{model}</div>
+        <h1>{name}</h1>
         <div className={style.description}>{description}</div>
       </div>
       <div className={style.image}>
         <Image src={imageUrl} alt={name} fill unoptimized></Image>
       </div>
-      <div className={style.price}>{price} 💲</div>
+      <div className={style.price}>€ {price.toFixed(2)} </div>
     </div>
   )
 }

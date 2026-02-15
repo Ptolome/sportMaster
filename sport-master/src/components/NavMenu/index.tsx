@@ -8,8 +8,8 @@ const NavMenu = () => {
     const pathname = usePathname()
   return (
     <div className={st.nav}>
-      <Link href='/rackets' className={pathname === '/rackets' ? st.active : ''}>Rackets</Link>
-      <Link href='/' className={pathname === '/' ? st.active : ''}>Home</Link>
+      <Link href='/rackets' className={pathname === '/rackets' ? st.active : ''}>Ракетки</Link>
+      <Link href='/' className={pathname === '/' ? st.active : ''}>Главная</Link>
     </div>
   )
 }

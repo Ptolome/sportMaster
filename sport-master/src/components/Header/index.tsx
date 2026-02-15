@@ -1,9 +1,11 @@
 import React from 'react'
 import NavMenu from '../NavMenu'
+import styles from './Header.module.css'
+import cn from 'classnames'
 
-const Header = () => {
+const Header = ({className: className = ''}) => {
   return (
-    <div>
+    <div className={cn(styles.header, className)}>
       <NavMenu/>
     </div>
   )

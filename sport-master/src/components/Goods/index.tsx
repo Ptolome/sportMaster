@@ -5,7 +5,6 @@ import { A11y, Navigation} from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './Goods.module.css';
 
-// Импорт стилей Swiper (добавьте в глобальные или здесь)
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
