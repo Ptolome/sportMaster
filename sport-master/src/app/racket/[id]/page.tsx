@@ -1,13 +1,17 @@
-import Card from "@/src/components/Card"
-import { FC } from "react"
+import Card from '@/src/components/Card';
+import { FC } from 'react';
 
-const Page:FC<PageProps<"/racket/[id]">>= async({params})=>{
-    const {id} = await params
-    return(
-        <div>
-           <Card id={id}/>
-        </div>
-    )
+export const generateStaticParams = async () => {
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+    ]
 }
 
-export default Page
+const Page: FC<PageProps<'/racket/[id]'>> = async ({ params }) => {
+  const { id } = await params;
+  return <Card id={id} />;
+};
+
+export default Page;

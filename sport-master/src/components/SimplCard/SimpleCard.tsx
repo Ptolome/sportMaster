@@ -1,33 +1,30 @@
-import Image from "next/image"
-import styles from "./SimpleCard.module.css"
-import { FC } from "react";
+import Image from 'next/image';
+import styles from './SimpleCard.module.css';
+import { FC } from 'react';
 
 interface SimpleCardProps {
-    imageUrl: string;
-    name: string;
+  imageUrl: string;
+  name: string;
 }
-const SimpleCard: FC<SimpleCardProps>= ({imageUrl, name }) => {
+const SimpleCard: FC<SimpleCardProps> = ({ imageUrl, name }) => {
   return (
-   <div className={styles.card}>
-        <div className={styles.imageWrapper}>
-        <Image 
-            src={imageUrl} 
-            alt={name} 
-            width={400} 
-            height={800} 
-            className={styles.image}
-            unoptimized
+    <div className={styles.card}>
+      <div className={styles.imageWrapper}>
+        <Image
+          src={imageUrl}
+          alt={name}
+          width={400}
+          height={800}
+          className={styles.image}
+          unoptimized
         />
-        </div>
+      </div>
 
-        <div className={styles.content}>
+      <div className={styles.content}>
         <h3 className={styles.title}>{name}</h3>
-        
-        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default SimpleCard
-
-
+export default SimpleCard;

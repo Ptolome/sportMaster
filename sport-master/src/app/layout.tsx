@@ -1,23 +1,23 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import Header from "@components/Header";
-import Footer from "@components/Footer";
-import  "./globals.css"
+import Header from '@components/Header';
+import Footer from '@components/Footer';
+import './globals.css';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "sport master",
-  description: "Store of sport goods",
+  title: 'sport master',
+  description: 'Store of sport goods',
 };
 
 export default function RootLayout({
@@ -28,10 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className="wripper">
-          <Header className='header'/>
-            <main>{children}</main>
-          <Footer className="footer"/>
+        <div className="wrapper">
+          <Header className="header" />
+          <main>{children}</main>
+          <Footer className="footer" />
         </div>
       </body>
     </html>

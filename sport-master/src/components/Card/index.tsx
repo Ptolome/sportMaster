@@ -1,26 +1,30 @@
-import style from "./Card.module.css"
-import {rackets} from "../../mocks/data" 
-import Image from "next/image"
+import style from './Card.module.css';
+import { rackets } from '../../mocks/data';
+import Image from 'next/image';
 
 interface CardProps {
-    id: number | string;
-};
-const index = ({id}: CardProps) => {
-   const good = rackets.find(good => good.id === Number(id))
-   
-   if (!good){
-    return (
-        <h1> Товар не найден</h1>
-    )
-   }
+  id: number | string;
+}
+const RacketCard = ({ id }: CardProps) => {
+  const good = rackets.find((good) => good.id === Number(id));
 
-   const {name, brand: {name: model}, description, imageUrl, price} = good
+  if (!good) {
+    return <h2> Товар не найден</h2>;
+  }
+
+  const {
+    name,
+    brand: { name: model },
+    description,
+    imageUrl,
+    price,
+  } = good;
 
   return (
-    <div className={style.wripper}>
+    <div className={style.wrapper}>
       <div className={style.information}>
         <div className={style.brand}>{model}</div>
-        <h1>{name}</h1>
+        <h2>{name}</h2>
         <div className={style.description}>{description}</div>
       </div>
       <div className={style.image}>
@@ -28,7 +32,7 @@ const index = ({id}: CardProps) => {
       </div>
       <div className={style.price}>€ {price.toFixed(2)} </div>
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default RacketCard;

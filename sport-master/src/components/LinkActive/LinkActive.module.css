@@ -1,8 +1,8 @@
-.nav {
-  display: flex;
-  gap: 1rem;
-  padding-block: 10px;
+.link {
+  text-decoration: none;
+  color: black;
 }
+
 .active {
   text-decoration: underline;
   color: green;

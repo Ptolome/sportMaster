@@ -1,17 +1,13 @@
-'use client'
-import Link from "next/link"
-import st from "./NavMenu.module.css"
-import { usePathname } from "next/navigation"
-
+import st from './NavMenu.module.css';
+import LinkActive from '../LinkActive';
 
 const NavMenu = () => {
-    const pathname = usePathname()
   return (
     <div className={st.nav}>
-      <Link href='/rackets' className={pathname === '/rackets' ? st.active : ''}>Ракетки</Link>
-      <Link href='/' className={pathname === '/' ? st.active : ''}>Главная</Link>
+      <LinkActive href="/rackets">Ракетки</LinkActive>
+      <LinkActive href="/">Главная</LinkActive>
     </div>
-  )
-}
+  );
+};
 
-export default NavMenu
+export default NavMenu;
