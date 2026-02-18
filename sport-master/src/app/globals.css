@@ -30,18 +30,3 @@ a {
 main {
   margin-top: 70px;
 }
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
-.footer {
-  margin-top: auto;
-}

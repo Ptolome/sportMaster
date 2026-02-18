@@ -1,6 +1,6 @@
-import SimpleCard from '../components/SimplCard/SimpleCard';
+import SimpleCard from '../../components/SimplCard/SimpleCard';
 import styles from './page.module.css';
-import { rackets } from '../mocks/data';
+import { rackets } from '../../mocks/data';
 
 export default function Home() {
   const firstThreeGoods = rackets.slice(0, 3);
