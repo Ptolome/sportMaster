@@ -21,7 +21,10 @@
     "paths": {
       "@/src/*": ["./src/*"],
       "@styles/*": ["./src/styles/*"],
-      "@components/*": ["./src/components/*"]
+      "@components/*": ["./src/components/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@types/*": ["./src/types/*"],
+      "@services/*": ["./src/services/*"]
     }
   },
   "include": [

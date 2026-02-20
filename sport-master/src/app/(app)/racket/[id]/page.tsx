@@ -1,13 +1,14 @@
-import Card from '@/src/components/Card';
-import { FC } from 'react';
-
-export const generateStaticParams = async () => {
-  return [{ id: '1' }, { id: '2' }, { id: '3' }];
-};
+import { RacketContainer } from '@/src/components/RacketCard/RacketCard-container';
+import { FC, Suspense } from 'react';
 
 const Page: FC<PageProps<'/racket/[id]'>> = async ({ params }) => {
   const { id } = await params;
-  return <Card id={id} />;
+
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <RacketContainer id={id} />;
+    </Suspense>
+  );
 };
 
 export default Page;

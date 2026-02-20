@@ -13,15 +13,13 @@ const SimpleCard: FC<SimpleCardProps> = ({ imageUrl, name }) => {
         <Image
           src={imageUrl}
           alt={name}
-          width={400}
-          height={800}
           className={styles.image}
+          fill
           unoptimized
         />
       </div>
-
       <div className={styles.content}>
-        <h3 className={styles.title}>{name}</h3>
+        <h3 className={styles.cardTitle}>{name}</h3>
       </div>
     </div>
   );
