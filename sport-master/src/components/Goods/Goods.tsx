@@ -5,14 +5,14 @@ import { FC } from 'react';
 import SimpleCard from '../SimplCard/SimpleCard';
 
 interface IProps {
-  rackets: IRacket[]
+  rackets: IRacket[];
 }
-const Goods:FC<IProps> = ( {rackets }) => {
+const Goods: FC<IProps> = ({ rackets }) => {
   return (
     <section className={styles.section}>
-         <div className={styles.horizontalScroll}>
+      <div className={styles.horizontalScroll}>
         {rackets.map(({ imageUrl, id, name }) => (
-          <Link href={`/racket/${id}`} key={id} className={styles.link} >
+          <Link href={`/racket/${id}`} key={id} className={styles.link}>
             <SimpleCard imageUrl={imageUrl} name={name} />
           </Link>
         ))}

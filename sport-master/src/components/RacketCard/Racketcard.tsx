@@ -4,11 +4,12 @@ import { IRacket } from '@/src/types/racket';
 import { FC } from 'react';
 
 interface IProps {
-  data: IRacket
+  data: IRacket;
 }
 
-const RacketCard: FC<IProps> = ({data:{name, description, imageUrl, price}}) => {
-
+const RacketCard: FC<IProps> = ({
+  data: { name, description, imageUrl, price },
+}) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.information}>
@@ -17,10 +18,10 @@ const RacketCard: FC<IProps> = ({data:{name, description, imageUrl, price}}) => 
         <div className={styles.description}>{description}</div>
       </div>
       <div className={styles.image}>
-        <Image 
-          src={imageUrl} 
-          alt={name} 
-          fill 
+        <Image
+          src={imageUrl}
+          alt={name}
+          fill
           unoptimized
           sizes="(max-width: 768px) 100vw, 50vw"
         />

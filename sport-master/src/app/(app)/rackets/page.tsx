@@ -1,4 +1,3 @@
-
 import { GoodsContainer } from '@/src/components/Goods/Goods-container';
 import { Suspense } from 'react';
 const Rackets = () => {
@@ -6,7 +5,7 @@ const Rackets = () => {
     <div>
       <h2> Ракетки </h2>
       <Suspense fallback={<div>Loading...</div>}>
-      <GoodsContainer limit={20} />
+        <GoodsContainer limit={20} />
       </Suspense>
     </div>
   );

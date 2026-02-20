@@ -1,2 +1,1 @@
-
-export type Response<T> = Promise<{ data?: T; isError: boolean }>
+export type Response<T> = Promise<{ data?: T; isError: boolean }>;
