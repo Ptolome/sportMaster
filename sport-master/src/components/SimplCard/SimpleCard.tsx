@@ -8,22 +8,20 @@ interface SimpleCardProps {
 }
 const SimpleCard: FC<SimpleCardProps> = ({ imageUrl, name }) => {
   return (
-    <div className={styles.card}>
-      <div className={styles.imageWrapper}>
-        <Image
-          src={imageUrl}
-          alt={name}
-          width={400}
-          height={800}
-          className={styles.image}
-          unoptimized
-        />
-      </div>
-
-      <div className={styles.content}>
-        <h3 className={styles.title}>{name}</h3>
-      </div>
-    </div>
+ <div className={styles.card}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={imageUrl}
+                  alt={name}
+                  className={styles.image}
+                  fill
+                  unoptimized
+                />
+              </div>
+              <div className={styles.content}>
+                <h3 className={styles.cardTitle}>{name}</h3>
+              </div>
+            </div>
   );
 };
 
