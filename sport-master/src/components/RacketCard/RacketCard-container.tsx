@@ -11,7 +11,7 @@ export const RacketContainer: FC<Props> = async ({ id }) => {
   const { isError, data } = await getRacketById(id);
 
   if (isError) {
-    return 'some Error';
+    throw new Error();
   }
 
   if (!data) {

@@ -1,4 +1,3 @@
-import React from 'react';
 import NavMenu from '../NavMenu';
 import styles from './Header.module.css';
 import cn from 'classnames';

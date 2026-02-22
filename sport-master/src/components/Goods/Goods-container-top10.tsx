@@ -5,7 +5,7 @@ export const GoodsContainerTop10 = async () => {
   const { isError, data } = await getRacketsTop10();
 
   if (isError) {
-    return 'some Error';
+    throw new Error();
   }
   if (!data) {
     return 'No data ';
