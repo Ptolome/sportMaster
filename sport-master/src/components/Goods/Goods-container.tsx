@@ -10,7 +10,7 @@ export const GoodsContainer: FC<Props> = async ({ limit, page }) => {
   const { isError, data } = await getRackets(limit, page);
 
   if (isError) {
-    return 'some Error';
+    throw new Error();
   }
   if (!data) {
     return 'No data ';
