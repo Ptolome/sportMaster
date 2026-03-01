@@ -17,5 +17,6 @@ export const RacketContainer: FC<Props> = async ({ id }) => {
   if (!data) {
     return notFound();
   }
+
   return <RacketCard data={data} />;
 };
