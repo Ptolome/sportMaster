@@ -24,7 +24,8 @@
       "@components/*": ["./src/components/*"],
       "@constants/*": ["./src/constants/*"],
       "@types/*": ["./src/types/*"],
-      "@services/*": ["./src/services/*"]
+      "@services/*": ["./src/services/*"],
+      "@helpers/*": ["./src/helpers/*"]
     }
   },
   "include": [
